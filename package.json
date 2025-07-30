@@ -1,0 +1,23 @@
+{
+  "name": "expresslearning",
+  "version": "1.0.0",
+  "description": "starting with express ; creating web apis using express",
+  "homepage": "https://github.com/nabayousuf27/ExpressLearning#readme",
+  "bugs": {
+    "url": "https://github.com/nabayousuf27/ExpressLearning/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nabayousuf27/ExpressLearning.git"
+  },
+  "license": "ISC",
+  "author": "Naba Yousuf",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
