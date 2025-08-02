@@ -20,7 +20,8 @@ app.get("/home", (req,res)=>{
 });
 
 app.get("/rolldice",(req,res)=>{
-    res.render("rolldice.ejs");
+    let diceValue = (Math.floor(Math.random()*6)+1);
+    res.render("rolldice.ejs",{num : diceValue});
 });
 app.listen(port , () =>{
     console.log(`listening on port ${port}`);
