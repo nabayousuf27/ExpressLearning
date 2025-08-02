@@ -19,6 +19,9 @@ app.get("/home", (req,res)=>{
     res.send("this is home");
 });
 
+app.get("/rolldice",(req,res)=>{
+    res.render("rolldice.ejs");
+});
 app.listen(port , () =>{
     console.log(`listening on port ${port}`);
 }); 
