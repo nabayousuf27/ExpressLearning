@@ -23,10 +23,22 @@ app.get("/rolldice",(req,res)=>{
     let diceValue = (Math.floor(Math.random()*6)+1);
     res.render("rolldice.ejs",{num : diceValue});
 });
+// app.get("/ig/:username", (req,res)=>{
+//     const followers =["Naba","Yousuf","saba","hawa"]
+//     let { username } = req.params;
+//     res.render("instagram.ejs" , {username, followers});
+// })
 app.get("/ig/:username", (req,res)=>{
-    const followers =["Naba","Yousuf","saba","hawa"]
-    let { username } = req.params;
-    res.render("instagram.ejs" , {username, followers});
+    let {username} = req.params;
+    const instaData = require("./data.json");
+    const data = instaData[username];
+    if(data)
+    {
+    res.render("instagram.ejs" , {data });
+    }else{
+        res.render("error.ejs");
+    }
+
 })
 app.listen(port , () =>{
     console.log(`listening on port ${port}`);
